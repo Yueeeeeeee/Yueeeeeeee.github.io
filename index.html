@@ -24,6 +24,18 @@
     <script src="./js/popper.min.js"></script>
     <script src="./js/docs.min.js"></script>
     <script src="./js/games/game1.js"></script>
+
+    <script type="text/javascript">
+      var background_image = document.getElementById('background_image');
+      background_image.onclick = function() {
+        var imageURLs = [
+          "url(./pics/tum_compressed.jpg)",
+          "url(./pics/ucsd_compressed.png)",
+          ];
+        var randomIndex = Math.floor(Math.random() * imageURLs.length);
+        background_image.css({"background-image": imageURLs[randomIndex]}); 
+        };
+    </script>
   </head>
 
   <body>
@@ -139,9 +151,10 @@
     <!-- Main Content Panel -->
     <main role="main">
       <div
+        id="background_image"
         class="jumbotron text-center"
         style="
-          background-image: url(./pics/cover_compressed.jpg);
+          background-image: url(./pics/ucsd_compressed.png);
           background-size: cover;
         "
       >
@@ -181,7 +194,7 @@
                 <img
                   class="card-img-top"
                   alt="JSGame1"
-                  src="pics/p5/cover.jpg"
+                  src="./pics/p5/cover.jpg"
                   data-holder-rendered="true"
                   style="height: 100%; width: 100%; display: block;"
                 />
@@ -270,7 +283,7 @@
                 <img
                   class="card-img-top"
                   alt="SLAMParking"
-                  src="pics/p4/cover.jpg"
+                  src="./pics/p4/cover.jpg"
                   data-holder-rendered="true"
                   style="height: 100%; width: 100%; display: block;"
                 />
